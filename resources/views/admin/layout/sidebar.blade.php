@@ -4,12 +4,15 @@
         <div class="sidebar-brand-icon">
             {{-- <i class="fas fa-laugh-wink"></i> --}}
             <img class="img-thumbnail" style="background-color : transparent; border : none; max-width: 50px" src="{{ url('') }}/img/ladang_icon.png" alt="">
-        </div>        
-        <div class="sidebar-brand-text">PT. Ladang Karya Husada</div>
+        </div>
+        <div class="sidebar-brand-text">Laboratorium</div>
     </a>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider mb-0 mt-5">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Main Menu
+    </div>
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item mt-0 {{ ($nvb == 'home') ? 'active' : '' }}">
@@ -23,35 +26,22 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Master Data
+        Manage
     </div>
 
-    <li class="nav-item {{ ($nvb == 'user') ? 'active' : '' }}">
-        <a class="nav-link" href="/admin/user"><i class="fas fa-fw fa-users"></i><span> Users</span></a>
-    </li>    
+     <!-- Nav Item - Manage Pegawai -->
+     <li class="nav-item mt-0 {{ ($nvb == 'employee') ? 'active' : '' }}">
+        <a class="nav-link" href="/employee">
+            <i class="fas fa-fw fa-hospital"></i>
+            <span>Hospital Employees</span></a>
+    </li>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider">
-
-    <!-- Heading -->
-    <div class="sidebar-heading">
-        Blog
-    </div>
-
-    <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item {{ ($nvb == 'post') ? 'active' : '' }}">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-            aria-expanded="true" aria-controls="collapsePages">
-            <i class="fas fa-fw fa-file"></i>
-            <span>Post</span>
-        </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">                
-                <a class="collapse-item" href="/admin/posts/new">New Post</a>
-                <a class="collapse-item" href="/admin/posts">Post</a>            
-            </div>
-        </div>
-    </li>    
+     <!-- Nav Item - Manage Pegawai -->
+     <li class="nav-item mt-0 {{ ($nvb == 'patient') ? 'active' : '' }}">
+        <a class="nav-link" href="/patient">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Patients</span></a>
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

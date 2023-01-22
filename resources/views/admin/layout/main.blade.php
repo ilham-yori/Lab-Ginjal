@@ -10,7 +10,7 @@
     <link href="{{ url('') }}/img/ladang_icon.png" rel="icon">
 
 
-    <title>Ladang Karya Husada {{ ($title != '') ? '| ' . $title : '' }}</title>
+    <title>Laboratorium Ginjal {{ ($title != '') ? '| ' . $title : '' }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ url('') }}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -25,6 +25,7 @@
 </head>
 
 <body id="page-top">
+    @include('sweetalert::alert')
     <div id="wrapper">
         {{-- Sidebar --}}
         @include('admin.layout.sidebar')
