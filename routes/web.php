@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/admin', [Admin\DashboardController::class, 'index']);
-Route::get('/admin', [Admin\DashboardController::class, 'index']);
+Route::get('/laborant', [Laborant\DashboardController::class, 'index']);
 
 Route::get('/employee', [Admin\EmployeeController::class, 'index']);
 Route::get('/employee/create', [Admin\EmployeeController::class, 'create']);
@@ -32,3 +32,5 @@ Route::get('/patient/edit/{id}', [Admin\PatientController::class, 'edit']);
 Route::post('/patient/update', [Admin\PatientController::class, 'update']);
 Route::get('/patient/delete/{id}', [Admin\PatientController::class, 'destroy']);
 Route::get('/patient/modify/{id}', [Admin\PatientController::class, 'modify']);
+
+Route::get('/laborant/history', [Laborant\DetectionHistoryController::class, 'index']);

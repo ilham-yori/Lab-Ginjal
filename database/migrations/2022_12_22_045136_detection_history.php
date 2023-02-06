@@ -17,8 +17,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('doctor_id');
             $table->unsignedBigInteger('patient_id');
-            $table->time('date_detection');
-            $table->time('validation_detection');
+            $table->text('image');
+            $table->string('prediction');
+            $table->dateTime('date_detection');
+            $table->String('validation_detection');
+            $table->dateTime('validation_date_detection');
             $table->timestamps();
             $table->foreign('doctor_id')->references('id')->on('hospital_employees');
             $table->foreign('patient_id')->references('id')->on('patients');
