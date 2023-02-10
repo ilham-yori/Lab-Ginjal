@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LoginController::class, 'index']);
 Route::post('/req', [LoginController::class, 'req']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/admin', [Admin\DashboardController::class, 'index']);
 Route::get('/laborant', [Laborant\DashboardController::class, 'index']);
