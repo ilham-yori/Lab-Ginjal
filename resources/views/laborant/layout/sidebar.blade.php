@@ -30,8 +30,8 @@
     </div>
 
      <!-- Nav Item - Manage Pegawai -->
-     <li class="nav-item mt-0 {{ ($nvb == 'employee') ? 'active' : '' }}">
-        <a class="nav-link" href="/employee">
+     <li class="nav-item mt-0 {{ ($nvb == 'detection') ? 'active' : '' }}">
+        <a class="nav-link" href="/laborant/detection">
             <i class="fa fa-heartbeat"></i>
             <span>Disease Detection</span></a>
     </li>

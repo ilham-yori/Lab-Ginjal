@@ -12,9 +12,7 @@ class DashboardController extends Controller
         if (Auth::check()) {
             if (auth()->user()->employee->role_id == 1) {
                 return redirect('/admin');
-            } else if (auth()->user()->employee->role_id == 2) {
-                return redirect('/laborant');
-            } else if (auth()->user()->employee->role_id == 3) {
+            }else if (auth()->user()->employee->role_id == 3) {
                 return redirect('/doctor');
             }
         }

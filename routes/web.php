@@ -18,23 +18,28 @@ Route::get('/', [LoginController::class, 'index']);
 Route::post('/req', [LoginController::class, 'req']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/admin', [Admin\DashboardController::class, 'index']);
-Route::get('/laborant', [Laborant\DashboardController::class, 'index']);
+Route::get('/admin', [Admin\DashboardController::class, 'index'])->middleware('auth');
 
-Route::get('/employee', [Admin\EmployeeController::class, 'index']);
-Route::get('/employee/create', [Admin\EmployeeController::class, 'create']);
-Route::post('/employee/store', [Admin\EmployeeController::class, 'store']);
-Route::get('/employee/edit/{id}', [Admin\EmployeeController::class, 'edit']);
-Route::post('/employee/update', [Admin\EmployeeController::class, 'update']);
-Route::get('/employee/delete/{id}', [Admin\EmployeeController::class, 'destroy']);
-Route::get('/employee/modify/{id}', [Admin\EmployeeController::class, 'modify']);
+Route::get('/laborant', [Laborant\DashboardController::class, 'index'])->middleware('auth');
+Route::get('/laborant/detection', [Laborant\DetectionHistoryController::class, 'index'])->middleware('auth');
+Route::get('/laborant/detection/add', [Laborant\DetectionHistoryController::class, 'add'])->middleware('auth');
 
-Route::get('/patient', [Admin\PatientController::class, 'index']);
-Route::get('/patient/create', [Admin\PatientController::class, 'create']);
-Route::post('/patient/store', [Admin\PatientController::class, 'store']);
-Route::get('/patient/edit/{id}', [Admin\PatientController::class, 'edit']);
-Route::post('/patient/update', [Admin\PatientController::class, 'update']);
-Route::get('/patient/delete/{id}', [Admin\PatientController::class, 'destroy']);
-Route::get('/patient/modify/{id}', [Admin\PatientController::class, 'modify']);
+Route::get('/employee', [Admin\EmployeeController::class, 'index'])->middleware('auth');
+Route::get('/employee/create', [Admin\EmployeeController::class, 'create'])->middleware('auth');
+Route::post('/employee/store', [Admin\EmployeeController::class, 'store'])->middleware('auth');
+Route::get('/employee/edit/{id}', [Admin\EmployeeController::class, 'edit'])->middleware('auth');
+Route::post('/employee/update', [Admin\EmployeeController::class, 'update'])->middleware('auth');
+Route::get('/employee/delete/{id}', [Admin\EmployeeController::class, 'destroy'])->middleware('auth');
+Route::get('/employee/modify/{id}', [Admin\EmployeeController::class, 'modify'])->middleware('auth');
 
-Route::get('/laborant/history', [Laborant\DetectionHistoryController::class, 'index']);
+Route::get('/patient', [Admin\PatientController::class, 'index'])->middleware('auth');
+Route::get('/patient/create', [Admin\PatientController::class, 'create'])->middleware('auth');
+Route::post('/patient/store', [Admin\PatientController::class, 'store'])->middleware('auth');
+Route::get('/patient/edit/{id}', [Admin\PatientController::class, 'edit'])->middleware('auth');
+Route::post('/patient/update', [Admin\PatientController::class, 'update'])->middleware('auth');
+Route::get('/patient/delete/{id}', [Admin\PatientController::class, 'destroy'])->middleware('auth');
+Route::get('/patient/modify/{id}', [Admin\PatientController::class, 'modify'])->middleware('auth');
+
+
+
+Route::get('/laborant/history', [Laborant\DetectionHistoryController::class, 'index'])->middleware('auth');
