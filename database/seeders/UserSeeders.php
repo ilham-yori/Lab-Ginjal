@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Employee;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +21,15 @@ class UserSeeders extends Seeder
         $user->status = '1';
         $user->timestamps;
         $user->save();
+
+        $employee = new Employee;
+        $employee->user_id = $user->id;
+        $employee->role_id = 1;
+        $employee->name = "Admin";
+        $employee->address = "Surabya";
+        $employee->phone_number = "0812345566789";
+        $employee->timestamps;
+        $employee->save();
     }
 
 }
