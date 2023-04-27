@@ -13,7 +13,7 @@ from torchvision import transforms
 app = Flask(__name__)
 
 # Load the saved model
-checkpoint_path='C:/laragon/www/lab-ginjal-app/API-ML/MLModel/model.pt'
+checkpoint_path='C:/laragon/www/lab-ginjal-app/API-ML/MLModel/model(1).pt'
 model= torchvision.models.resnet18(pretrained=True)
 num_ftrs = model.fc.in_features
 model.fc = nn.Linear(num_ftrs, 2)
@@ -25,7 +25,7 @@ def preprocess_image(image):
     transform = transforms.Compose([
         transforms.Resize(224),
         transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+        #transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
     image = transform(image).unsqueeze(0)
     return image
