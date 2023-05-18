@@ -41,16 +41,16 @@
                                 </td>
                                 <td align="center">
                                     <div class="d-flex justify-content-between" style="width:80px">
-                                        <a href="/patient/edit/{{ $item->id }}" class="btn btn-sm btn-warning"
+                                        <a href="/patient/edit/{{ $item->id }}" class="btn btn-sm btn-secondary"
                                             title="Edit"><span class="fas fa-fw fa-edit"></span></a>
+
                                             @if (isset($item->history->id))
                                             <a href="/patient/modify/{{ $item->id }}"
-                                                onclick="return confirm('Are you sure you want to deactivate this battery?');"
-                                                class="btn btn-sm btn-danger" title="Remove"><span
-                                                    class="fas fa-fw fa-trash"></span></a>
+                                                class="btn btn-sm btn-warning" title="Remove"><span
+                                                    class="fas fa-fw fa-archive"></span></a>
                                             @else
                                             <a href="/patient/delete/{{ $item->id }}"
-                                                onclick="return confirm('Are you sure you want to deactivate this battery?');"
+                                                onclick="return confirm('Apakah anda yakin mau menghapus pasien ini ?');"
                                                 class="btn btn-sm btn-danger" title="Remove"><span
                                                     class="fas fa-fw fa-trash"></span></a>
                                             @endif

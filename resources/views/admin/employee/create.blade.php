@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="password">New Password (Optional)</label>
+                    <label for="password">Password</label>
                     <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" value="{{ old('password') }}" autocomplete="off" required>
                     @error('password')
                     <div class="invalid-feedback">

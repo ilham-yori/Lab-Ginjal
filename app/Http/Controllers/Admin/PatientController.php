@@ -79,7 +79,7 @@ class PatientController extends Controller
     public function destroy($id)
     {
         DB::beginTransaction();
-        $patient = Patient::where('user_id',$id)->first();
+        $patient = Patient::where('id',$id)->first();
         $patient->delete();
         Alert::success('Sukses', $patient->name . ' berhasil dihapus');
         DB::commit();

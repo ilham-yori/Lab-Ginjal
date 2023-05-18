@@ -11,7 +11,7 @@ class DetectionHistory extends Model
 
     protected $table = "detection_history";
 
-    public function employee()
+    public function doctor()
     {
         return $this->belongsTo(Employee::class, "doctor_id", "id");
     }
@@ -20,4 +20,10 @@ class DetectionHistory extends Model
     {
         return $this->belongsTo(Patient::class, "patient_id", "id");
     }
+
+    public function laborant()
+    {
+        return $this->belongsTo(Employee::class, "laborant_id", "id");
+    }
+
 }

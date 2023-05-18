@@ -20,7 +20,7 @@ class UserSeeders extends Seeder
         $user = new User;
         $user->email = 'admin@lab-ginjal.com';
         $user->password = bcrypt('1234');
-        $user->status = '1';
+        $user->status = 'Active';
         $user->timestamps;
         $user->save();
 
@@ -36,7 +36,7 @@ class UserSeeders extends Seeder
         $user2 = new User;
         $user2->email = 'laborant@lab-ginjal.com';
         $user2->password = bcrypt('1234');
-        $user2->status = '1';
+        $user2->status = 'Active';
         $user2->timestamps;
         $user2->save();
 
@@ -44,6 +44,23 @@ class UserSeeders extends Seeder
         $employee->user_id = $user2->id;
         $employee->role_id = 2;
         $employee->name = "Laborant";
+        $employee->address = "Surabaya";
+        $employee->phone_number = "081234534189";
+        $employee->timestamps;
+        $employee->save();
+        DB::commit();
+
+        $user3 = new User;
+        $user3->email = 'doctor@lab-ginjal.com';
+        $user3->password = bcrypt('1234');
+        $user3->status = 'Active';
+        $user3->timestamps;
+        $user3->save();
+
+        $employee = new Employee;
+        $employee->user_id = $user3->id;
+        $employee->role_id = 3;
+        $employee->name = "Doctor";
         $employee->address = "Surabaya";
         $employee->phone_number = "081234534189";
         $employee->timestamps;

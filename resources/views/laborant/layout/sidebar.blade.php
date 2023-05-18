@@ -29,18 +29,18 @@
         Patient
     </div>
 
-     <!-- Nav Item - Manage Pegawai -->
-     <li class="nav-item mt-0 {{ ($nvb == 'detection') ? 'active' : '' }}">
-        <a class="nav-link" href="/laborant/detection">
-            <i class="fa fa-heartbeat"></i>
-            <span>Disease Detection</span></a>
-    </li>
-
-     <!-- Nav Item - Manage Pegawai -->
-     <li class="nav-item mt-0 {{ ($nvb == 'detectionHistory') ? 'active' : '' }}">
+    <!-- Nav Item - Manage Pegawai -->
+    <li class="nav-item mt-0 {{ ($nvb == 'detectHistory') ? 'active' : '' }}">
         <a class="nav-link" href="/laborant/history">
             <i class="bi bi-journal-medical"></i>
             <span>Patient Detection History</span></a>
+    </li>
+
+     <!-- Nav Item - Manage Pegawai -->
+     <li class="nav-item mt-0 {{ ($nvb == 'detection') ? 'active' : '' }}">
+        <a class="nav-link" href="/laborant/detection/create">
+            <i class="fa fa-heartbeat"></i>
+            <span>Disease Detection</span></a>
     </li>
 
     <!-- Divider -->

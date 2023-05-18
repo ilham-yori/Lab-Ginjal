@@ -21,8 +21,13 @@ class Employee extends Model
         return $this->belongsTo(User::class, "user_id", "id");
     }
 
-    public function history()
+    public function doctorHistory()
     {
         return $this->hasMany(DetectionHistory::class, "doctor_id", "id");
+    }
+
+    public function laborantHistory()
+    {
+        return $this->hasMany(DetectionHistory::class, "laborant_id", "id");
     }
 }

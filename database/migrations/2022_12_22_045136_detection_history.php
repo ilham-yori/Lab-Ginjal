@@ -15,16 +15,18 @@ return new class extends Migration
     {
         Schema::create('detection_history', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('doctor_id');
+            $table->unsignedBigInteger('laborant_id');
             $table->unsignedBigInteger('patient_id');
             $table->text('image');
-            $table->string('prediction');
+            $table->string('prediction')->nullable();
             $table->dateTime('date_detection');
-            $table->String('validation_detection');
-            $table->dateTime('validation_date_detection');
+            $table->unsignedBigInteger('doctor_id')->nullable();
+            $table->String('validation_detection')->nullable();
+            $table->dateTime('validation_date_detection')->nullable();
             $table->timestamps();
-            $table->foreign('doctor_id')->references('id')->on('hospital_employees');
             $table->foreign('patient_id')->references('id')->on('patients');
+            $table->foreign('laborant_id')->references('id')->on('hospital_employees');
+            $table->foreign('doctor_id')->references('id')->on('hospital_employees');
         });
     }
 

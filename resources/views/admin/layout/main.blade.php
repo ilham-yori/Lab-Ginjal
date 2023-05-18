@@ -10,7 +10,7 @@
     <link href="{{ url('') }}/img/ladang_icon.png" rel="icon">
 
 
-    <title>Laboratorium Ginjal {{ ($title != '') ? '| ' . $title : '' }}</title>
+    <title>Laboratorium Ginjal {{ $title != '' ? '| ' . $title : '' }}</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ url('') }}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -60,7 +60,7 @@
     <script src="{{ url('') }}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="{{ url('') }}/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{ url('') }}/vendor/jquery-easing/jquery.easing.min.js"></scrip>
 
     <!-- Custom scripts for all pages-->
     <script src="{{ url('') }}/js/sb-admin-2.min.js"></script>

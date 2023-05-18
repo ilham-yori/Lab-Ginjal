@@ -26,7 +26,7 @@ class EmployeeController extends Controller
     {
         return view('admin.employee.create',[
             'title' => 'Add Data Employee',
-            'nvb' => 'employee'
+            'nvb' => 'addEmployee'
 
         ]);
     }
@@ -62,7 +62,7 @@ class EmployeeController extends Controller
 
         return view('admin.employee.edit', [
             'title' => 'Edit Data Employee',
-            'nvb' => 'ports',
+            'nvb' => 'editEmployee',
             'user' => $user,
             'employee' => $employee
         ]);

@@ -45,19 +45,41 @@
                                 </td>
                                 <td align="center">
                                     <div class="d-flex justify-content-between" style="width:80px">
-                                        <a href="/employee/edit/{{ $item->user->id }}" class="btn btn-sm btn-warning"
+                                        <a href="/employee/edit/{{ $item->user->id }}" class="btn btn-sm btn-secondary"
                                             title="Edit"><span class="fas fa-fw fa-edit"></span></a>
-                                            @if (isset($item->history->id))
-                                            <a href="/employee/modify/{{ $item->user->id }}"
-                                                onclick="return confirm('Are you sure you want to deactivate this battery?');"
-                                                class="btn btn-sm btn-danger" title="Remove"><span
-                                                    class="fas fa-fw fa-trash"></span></a>
-                                            @else
-                                            <a href="/employee/delete/{{ $item->user->id }}"
-                                                onclick="return confirm('Are you sure you want to deactivate this battery?');"
-                                                class="btn btn-sm btn-danger" title="Remove"><span
-                                                    class="fas fa-fw fa-trash"></span></a>
-                                            @endif
+                                            @switch($item->roles->role_name)
+                                                @case('Laborant')
+                                                @if (isset($item->laborantHistory[0]->id))
+                                                <a href="/employee/modify/{{ $item->user->id }}"
+                                                    onclick="return confirm('Apakah anda yakin mau menghapus karyawan ini ?');"
+                                                    class="btn btn-sm btn-warning" title="Remove">
+                                                    <span class="fas fa-fw fa-archive"></span></a>
+                                                @else
+                                                <a href="/employee/delete/{{ $item->user->id }}"
+                                                    onclick="return confirm('Apakah anda yakin mau menghapus karyawan ini ?');"
+                                                    class="btn btn-sm btn-danger" title="Remove">
+                                                    <span class="fas fa-fw fa-trash"></span></a>
+                                                @endif
+                                                    @break
+                                                @case('Doctor')
+                                                @if (isset($item->doctorHistory[0]->id))
+                                                <a href="/employee/modify/{{ $item->user->id }}"
+                                                    onclick="return confirm('Apakah anda yakin mau menghapus karyawan ini ?');"
+                                                    class="btn btn-sm btn-warning" title="Remove">
+                                                    <span class="fas fa-fw fa-archive"></span></a>
+                                                @else
+                                                <a href="/employee/delete/{{ $item->user->id }}"
+                                                    onclick="return confirm('Apakah anda yakin mau menghapus karyawan ini ?');"
+                                                    class="btn btn-sm btn-danger" title="Remove">
+                                                    <span class="fas fa-fw fa-trash"></span></a>
+                                                @endif
+                                                    @break
+                                                @default
+                                                <a href="/employee/delete/{{ $item->user->id }}"
+                                                    onclick="return confirm('Apakah anda yakin mau menghapus karyawan ini ?');"
+                                                    class="btn btn-sm btn-danger" title="Remove">
+                                                    <span class="fas fa-fw fa-trash"></span></a>
+                                            @endswitch
                                     </div>
                                 </td>
                             </tr>
