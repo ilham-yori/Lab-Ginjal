@@ -29,20 +29,20 @@
     @include('sweetalert::alert')
     <div id="wrapper">
         {{-- Sidebar --}}
-        @include('laborant.layout.sidebar')
+        @include('doctor.layout.sidebar')
         {{-- End of Sidebar --}}
 
         {{-- Content --}}
         <div id="content-wrapper" class="d-flex flex-column">
             {{-- Main Content --}}
-            <div id="scanner">
+            <div id="validation">
                 {{-- Top Bar --}}
-                @include('laborant.layout.navbar')
+                @include('doctor.layout.navbar')
                 {{-- End of Top Bar --}}
 
                 {{-- Page Content --}}
                 <div class="container-fluid">
-                    @yield('scanner')
+                    @yield('validation')
                 </div>
                 {{-- End of Page Content --}}
             </div>

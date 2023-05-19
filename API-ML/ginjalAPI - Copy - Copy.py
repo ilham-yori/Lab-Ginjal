@@ -8,9 +8,11 @@ import torch.optim as optim
 from io import BytesIO
 from PIL import Image
 from flask import Flask, request, render_template
+from flask_cors import CORS
 from torchvision import transforms
 
 app = Flask(__name__)
+CORS(app)
 
 # Load the saved model
 checkpoint_path='C:/laragon/www/lab-ginjal-app/API-ML/MLModel/newmodel.pt'

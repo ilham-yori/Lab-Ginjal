@@ -21,6 +21,8 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/admin', [Admin\DashboardController::class, 'index'])->middleware('auth');
 
 Route::get('/doctor', [Doctor\DashboardController::class, 'index'])->middleware('auth');
+Route::get('/doctor/history', [Doctor\ValidationController::class, 'index'])->middleware('auth');
+Route::get('/doctor/detail/{id}', [Doctor\ValidationController::class, 'detail'])->middleware('auth');
 
 Route::get('/laborant', [Laborant\DashboardController::class, 'index'])->middleware('auth');
 Route::get('/laborant/detection/create', [Laborant\DetectionHistoryController::class, 'create'])->middleware('auth');

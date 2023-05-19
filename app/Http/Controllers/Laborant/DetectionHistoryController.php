@@ -38,13 +38,16 @@ class DetectionHistoryController extends Controller
         DB::beginTransaction();
 
         $request->validate([
-            'img' => 'required|image|mimes:jpeg,png,jpg|max:20048',
+            'patient' => ['required'],
+            'prediction' => ['required'],
+            'img' => 'required|image|mimes:jpeg,png,jpg|max:20048'
         ]);
 
         $detection_history = new DetectionHistory;
 
         $detection_history->patient_id = $request->patient;
         $detection_history->date_detection = date_create();
+        $detection_history->prediction = $request->prediction;
         $detection_history->validation_detection = 'Unvalidate';
         $detection_history->laborant_id = auth()->user()->id;
 
@@ -53,7 +56,7 @@ class DetectionHistoryController extends Controller
         $detection_history->save();
         DB::commit();
 
-        Alert::success('Sukses Melakukan Deteksi');
+        Alert::success('Sukses melakukan deteksi');
         return redirect("/laborant/history");
     }
 

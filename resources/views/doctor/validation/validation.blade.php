@@ -1,5 +1,5 @@
-@extends('laborant.layout.main')
-@section('scanner')
+@extends('doctor.layout.main')
+@section('validation')
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Patient Detail Data </h1>
     </div>
@@ -86,7 +86,7 @@
                     <a href="#" data-toggle="modal" data-target="#imageModal"
                         onclick="showImage('{{ $detectionHistory->image }}')" title="Lihat Foto">
                         <img src="{{ url('') }}/storage/{{ $detectionHistory->image }}" alt="image"
-                            style="width:256px; height:512px"></a>
+                            style="width: auto;"></a>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item mt-0 {{ ($nvb == 'home') ? 'active' : '' }}">
-        <a class="nav-link" href="/laborant">
+        <a class="nav-link" href="/doctor">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -31,16 +31,16 @@
 
     <!-- Nav Item - Manage Pegawai -->
     <li class="nav-item mt-0 {{ ($nvb == 'detectHistory') ? 'active' : '' }}">
-        <a class="nav-link" href="/laborant/history">
+        <a class="nav-link" href="/doctor/history">
             <i class="bi bi-journal-medical"></i>
             <span>Patient Detection History</span></a>
     </li>
 
-     <!-- Nav Item - Manage Pegawai -->
-     <li class="nav-item mt-0 {{ ($nvb == 'detection') ? 'active' : '' }}">
-        <a class="nav-link" href="/laborant/detection/create">
+    <!-- Nav Item - Manage Pegawai -->
+    <li class="nav-item mt-0 {{ ($nvb == 'validation') ? 'active' : '' }}">
+        <a class="nav-link" href="/doctor/detection/validation">
             <i class="fa fa-heartbeat"></i>
-            <span>Disease Detection</span></a>
+            <span>Validation Detection</span></a>
     </li>
 
     <!-- Divider -->

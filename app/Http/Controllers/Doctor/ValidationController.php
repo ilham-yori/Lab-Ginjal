@@ -11,11 +11,22 @@ class ValidationController extends Controller
     public function index(){
         $detection_history = DetectionHistory::orderBy("created_at","asc")->get();
 
-        return view('laborant.detection.index',[
+        return view('doctor.detection.index',[
             'title' => 'Detection History',
             'nvb' => 'detectHistory',
             'detectionHistory' => $detection_history
 
+        ]);
+    }
+
+    public function detail($id)
+    {
+        $detection_history = DetectionHistory::findOrFail($id);
+
+        return view('doctor.detection.detail', [
+            'title' => 'Data Detail Detection',
+            'nvb' => 'detail',
+            'detectionHistory' => $detection_history
         ]);
     }
 }
