@@ -22,7 +22,10 @@ Route::get('/admin', [Admin\DashboardController::class, 'index'])->middleware('a
 
 Route::get('/doctor', [Doctor\DashboardController::class, 'index'])->middleware('auth');
 Route::get('/doctor/history', [Doctor\ValidationController::class, 'index'])->middleware('auth');
+Route::get('/doctor/recent', [Doctor\ValidationController::class, 'recentValidation'])->middleware('auth');
 Route::get('/doctor/detail/{id}', [Doctor\ValidationController::class, 'detail'])->middleware('auth');
+Route::get('/doctor/validate/{id}', [Doctor\ValidationController::class, 'validation'])->middleware('auth');
+Route::post('/doctor/validate/{id}/store', [Doctor\ValidationController::class, 'store'])->middleware('auth');
 
 Route::get('/laborant', [Laborant\DashboardController::class, 'index'])->middleware('auth');
 Route::get('/laborant/detection/create', [Laborant\DetectionHistoryController::class, 'create'])->middleware('auth');

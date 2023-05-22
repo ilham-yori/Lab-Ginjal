@@ -38,8 +38,8 @@
                                 <td>
                                     {{ $item->prediction}}
                                 </td>
-                                <td>
-                                    {{ $item->date_detection}}
+                                <td style="text-align: center">
+                                    {{ Carbon\Carbon::parse($item->date_detection)->format('d / M / Y ') }}
                                 </td>
                                 <td>
                                     {{ $item->validation_detection}}

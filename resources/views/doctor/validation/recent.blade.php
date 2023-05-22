@@ -37,7 +37,7 @@
                                     {{ $item->prediction}}
                                 </td>
                                 <td style="text-align: center">
-                                    {{ Carbon\Carbon::parse($item->date_detection)->format('d / M / Y ') }}
+                                    {{ Carbon\Carbon::parse($item->date_detection)->format('d / M / Y') }}
                                 </td>
                                 <td>
                                     {{ $item->validation_detection}}

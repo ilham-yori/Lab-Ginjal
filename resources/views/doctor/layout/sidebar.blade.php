@@ -38,9 +38,9 @@
 
     <!-- Nav Item - Manage Pegawai -->
     <li class="nav-item mt-0 {{ ($nvb == 'validation') ? 'active' : '' }}">
-        <a class="nav-link" href="/doctor/detection/validation">
+        <a class="nav-link" href="/doctor/recent">
             <i class="fa fa-heartbeat"></i>
-            <span>Validation Detection</span></a>
+            <span>Recent Validation</span></a>
     </li>
 
     <!-- Divider -->
