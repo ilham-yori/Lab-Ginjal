@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -31,12 +33,18 @@ class LoginController extends Controller
             'password' => ['required']
         ]);
 
-        if (Auth::attempt($data)) {
-            $request->session()->regenerate();
+        $status = DB::table('users')->where('email', $request->email)->value('status');
 
-            return redirect()->intended('/admin');
+        if ($status == "Active") {
+            if (Auth::attempt($data)) {
+
+                $request->session()->regenerate();
+                return redirect()->intended('/admin');
+
+            }else{
+                return back()->with('loginError', 'Login failed!');
+            }
         }
-
         return back()->with('loginError', 'Login failed!');
     }
 

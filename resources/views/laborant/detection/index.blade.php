@@ -51,10 +51,15 @@
                                 </td>
                                 <td align="center">
                                     <div class="d-flex justify-content-between" style="width:80px">
+                                        @if ($item->validation_detection == "Unvalidate")
                                         <a href="/laborant/detail/{{ $item->id }}"class="btn btn-sm btn-warning" title="Detail">
                                             <span class="fas fa-fw fa-id-card"></span></a>
                                         <a href="/laborant/delete/{{ $item->id }}"class="btn btn-sm btn-danger" title="Delete">
                                             <span class="fas fa-fw fa-trash"></span></a>
+                                        @else
+                                        <a href="/laborant/detail/{{ $item->id }}"class="btn btn-sm btn-warning" title="Detail">
+                                            <span class="fas fa-fw fa-id-card"></span></a>
+                                        @endif
                                     </div>
                                 </td>
                             </tr>
@@ -69,7 +74,6 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                {{-- <h5 class="modal-title" id="imageModalLabel">{{ $item->id . ' - ' . $item->patient->name }}</h5> --}}
                 <h5 class="modal-title" id="imageModalLabel">Ultrasonography Ginjal</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
