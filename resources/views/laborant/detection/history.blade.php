@@ -1,12 +1,12 @@
-@extends('doctor.layout.main')
-@section('validation')
+@extends('laborant.layout.main')
+@section('scanner')
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Recent Validate Detection Data</h1>
+    <h1 class="h3 mb-0 text-gray-800">Patient Detection Data</h1>
 </div>
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Recent Validate Detection Data</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Patient Detection Data</h6>
     </div>
 
     <div class="card-body">
@@ -37,7 +37,7 @@
                                     {{ $item->prediction}}
                                 </td>
                                 <td>
-                                    {{ Carbon\Carbon::parse($item->date_detection)->format('d / M / Y') }}
+                                    {{ Carbon\Carbon::parse($item->date_detection)->format('d / M / Y ') }}
                                 </td>
                                 <td>
                                     {{ $item->validation_detection}}
@@ -49,7 +49,7 @@
                                 </td>
                                 <td align="center">
                                     <div class="d-flex justify-content-center" style="width:auto">
-                                        <a href="/doctor/detail/{{ $item->id }}"class="btn btn-sm btn-info" title="Detail Data">
+                                        <a href="/laborant/detail/{{ $item->id }}"class="btn btn-sm btn-info" title="Detail">
                                             <span class="fas fa-fw fa-id-card"></span><b> Detail Data</b></a>
                                     </div>
                                 </td>

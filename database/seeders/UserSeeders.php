@@ -27,9 +27,9 @@ class UserSeeders extends Seeder
         $employee = new Employee;
         $employee->user_id = $user->id;
         $employee->role_id = 1;
-        $employee->name = "Admin";
-        $employee->address = "Surabaya";
-        $employee->phone_number = "0812345566789";
+        $employee->name = "Muhammad Dimas, S.Kom";
+        $employee->address = "Mojokerto";
+        $employee->phone_number = "085534823129";
         $employee->timestamps;
         $employee->save();
 
@@ -43,9 +43,9 @@ class UserSeeders extends Seeder
         $employee = new Employee;
         $employee->user_id = $user2->id;
         $employee->role_id = 2;
-        $employee->name = "Laborant";
-        $employee->address = "Surabaya";
-        $employee->phone_number = "081234534189";
+        $employee->name = "Adelina Pratiwi, A.Rad., S.ST., M.Kes.";
+        $employee->address = "Sidoarjo";
+        $employee->phone_number = "085334885723";
         $employee->timestamps;
         $employee->save();
         DB::commit();
@@ -60,9 +60,9 @@ class UserSeeders extends Seeder
         $employee = new Employee;
         $employee->user_id = $user3->id;
         $employee->role_id = 3;
-        $employee->name = "Doctor";
+        $employee->name = "Dr. Efrilyn Sidabutar, SpPD.";
         $employee->address = "Surabaya";
-        $employee->phone_number = "081234534189";
+        $employee->phone_number = "085857211253";
         $employee->timestamps;
         $employee->save();
         DB::commit();

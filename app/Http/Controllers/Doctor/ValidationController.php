@@ -15,6 +15,17 @@ class ValidationController extends Controller
         $detection_history = DetectionHistory::orderBy("created_at","asc")->where('validation_detection', '=', 'Unvalidate')->get();
 
         return view('doctor.validation.index',[
+            'title' => 'Unvalidate Detection',
+            'nvb' => 'unvalidateDetection',
+            'detectionHistory' => $detection_history
+
+        ]);
+    }
+
+    public function history(){
+        $detection_history = DetectionHistory::orderBy("created_at","asc")->get();
+
+        return view('doctor.validation.history',[
             'title' => 'Detection History',
             'nvb' => 'detectHistory',
             'detectionHistory' => $detection_history
@@ -44,10 +55,10 @@ class ValidationController extends Controller
         ]);
     }
 
-    public function recentValidation(){
+    public function recent(){
         $detection_history = DetectionHistory::orderBy("created_at","desc")->where('validation_detection', '!=', 'Unvalidate')->get();
 
-        return view('doctor.validation.index',[
+        return view('doctor.validation.recent',[
             'title' => 'Recent Validation',
             'nvb' => 'validation',
             'detectionHistory' => $detection_history
@@ -69,6 +80,6 @@ class ValidationController extends Controller
         DB::commit();
 
         Alert::success('Sukses melakukan validasi');
-        return redirect("/doctor/history");
+        return redirect("/doctor/unvalidate");
     }
 }

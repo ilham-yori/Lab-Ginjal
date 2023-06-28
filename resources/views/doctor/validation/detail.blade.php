@@ -78,8 +78,8 @@
                     </div>
                     <hr>
                     <div style="display:flex; justify-content:flex-end; width:100%; padding:0;">
-                        <a href="/doctor/validate/{{$detectionHistory->id}}"class="btn btn-sm btn-info" title="Validation">
-                            <span class="fas fa-fw fa-id-card"></span>  Validation</a>
+                        <a href="/doctor/validate/{{$detectionHistory->id}}"class="btn btn-sm btn-warning" title="Validation">
+                            <span class="fas fa-fw fa-id-card"></span>  <b> Validate</b></a>
                     </div>
                 </div>
             </div>

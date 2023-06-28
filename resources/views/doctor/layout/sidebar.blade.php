@@ -29,18 +29,25 @@
         Patient
     </div>
 
-    <!-- Nav Item - Manage Pegawai -->
-    <li class="nav-item mt-0 {{ ($nvb == 'detectHistory') ? 'active' : '' }}">
-        <a class="nav-link" href="/doctor/history">
-            <i class="bi bi-journal-medical"></i>
-            <span>Patient Detection History</span></a>
+    <!-- Nav Item - Unvalidate Data-->
+    <li class="nav-item mt-0 {{ ($nvb == 'unvalidateDetection') ? 'active' : '' }}">
+        <a class="nav-link" href="/doctor/unvalidate">
+            <i class="fas fa-file-medical-alt"></i>
+            <span>Unvalidated Detection</span></a>
     </li>
 
-    <!-- Nav Item - Manage Pegawai -->
+    <!-- Nav Item - Recent Validate -->
     <li class="nav-item mt-0 {{ ($nvb == 'validation') ? 'active' : '' }}">
         <a class="nav-link" href="/doctor/recent">
-            <i class="fa fa-heartbeat"></i>
+            <i class="bi bi-check-square-fill"></i>
             <span>Recent Validation</span></a>
+    </li>
+
+    <!-- Nav Item - Decetion History -->
+    <li class="nav-item mt-0 {{ ($nvb == 'detectHistory') ? 'active' : '' }}">
+        <a class="nav-link" href="/doctor/history">
+            <i class="fas fa-procedures"></i>
+            <span>Patient Detection History</span></a>
     </li>
 
     <!-- Divider -->

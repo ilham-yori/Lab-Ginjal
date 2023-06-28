@@ -29,14 +29,14 @@
         Manage
     </div>
 
-     <!-- Nav Item - Manage Pegawai -->
+     <!-- Nav Item - Manage Employee -->
      <li class="nav-item mt-0 {{ ($nvb == 'employee') ? 'active' : '' }}">
         <a class="nav-link" href="/employee">
             <i class="fas fa-fw fa-hospital"></i>
             <span>Hospital Employees</span></a>
     </li>
 
-     <!-- Nav Item - Manage Pegawai -->
+     <!-- Nav Item - Manage Patient -->
      <li class="nav-item mt-0 {{ ($nvb == 'patient') ? 'active' : '' }}">
         <a class="nav-link" href="/patient">
             <i class="fas fa-fw fa-users"></i>

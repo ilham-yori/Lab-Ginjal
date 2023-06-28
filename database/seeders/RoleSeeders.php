@@ -22,7 +22,7 @@ class RoleSeeders extends Seeder
         $role->save();
 
         $role = new Role;
-        $role->role_name = 'Laborant';
+        $role->role_name = 'Radiographer';
         $role->timestamps;
         $role->save();
 

@@ -1,14 +1,14 @@
 @extends('laborant.layout.main')
 @section('scanner')
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Detection Data</h1>
+    <h1 class="h3 mb-0 text-gray-800">Unvalidated Detection Data</h1>
     <a href="/laborant/detection/create" class="d-none d-sm-inline-block btn btn-primary shadow-sm"><span
-        class="fas fa-fw fa-plus fa-sm text-white-50"></span> Add Detection</a>
+        class="fas fa-fw fa-plus fa-sm text-white-50"></span> Disease Detection</a>
 </div>
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Detection Data</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Unvalidated Detection Data</h6>
     </div>
 
     <div class="card-body">
@@ -38,7 +38,7 @@
                                 <td>
                                     {{ $item->prediction}}
                                 </td>
-                                <td style="text-align: center">
+                                <td>
                                     {{ Carbon\Carbon::parse($item->date_detection)->format('d / M / Y ') }}
                                 </td>
                                 <td>
@@ -47,7 +47,7 @@
                                 <td align="center">
                                     <a href="#" class="btn btn-sm btn-primary mr-1" data-toggle="modal"
                                         data-target="#imageModal" onclick="showImage('{{ $item->image }}')" title="Lihat Foto">
-                                        <i class="bi bi-image"></i>  Lihat Gambar</a>
+                                        <i class="bi bi-image"></i>  <b> Lihat Gambar</b></a>
                                 </td>
                                 <td align="center">
                                     <div class="d-flex justify-content-between" style="width:80px">

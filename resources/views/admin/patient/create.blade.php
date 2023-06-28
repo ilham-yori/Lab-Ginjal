@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                    <a href="/employee" class="btn btn-danger">Cancel</a>
+                    <a href="/patient" class="btn btn-danger">Cancel</a>
                     <input type="submit" name="submit" class="btn btn-primary" id="" value="Save">
                 </div>
             </form>

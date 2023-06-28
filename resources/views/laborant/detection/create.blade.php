@@ -90,7 +90,7 @@
             formData.append('image', file);
 
             $.ajax({
-                url: 'http://127.0.0.1:5000/predict', //API
+                url: 'http://127.0.0.1:5000/predict', //API URL
                 type: 'POST',
                 data: formData,
                 processData: false,
@@ -100,7 +100,7 @@
                     if (response == "0") {
                         $('#prediction').val('Batu Ginjal')
                     } else if (response == "1") {
-                        $('#prediction').val('Normal')
+                        $('#prediction').val('Ginjal Normal')
                     }
                     $('#progress').innertHTML = '';
                 },

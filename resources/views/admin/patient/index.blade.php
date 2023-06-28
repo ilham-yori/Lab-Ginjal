@@ -63,5 +63,4 @@
             </div>
         </div>
     </div>
-    {{-- END OF MODAL TAMBAH --}}
 @endsection

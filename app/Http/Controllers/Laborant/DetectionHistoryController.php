@@ -12,11 +12,22 @@ use RealRashid\SweetAlert\Facades\Alert;
 class DetectionHistoryController extends Controller
 {
     public function index(){
-        $detection_history = DetectionHistory::orderBy("created_at","asc")->get();
+        $detection_history = DetectionHistory::orderBy("created_at","asc")->where('validation_detection', '=', 'Unvalidate')->get();
 
         return view('laborant.detection.index',[
-            'title' => 'Detection History',
-            'nvb' => 'detectHistory',
+            'title' => 'Unvalidate Detection',
+            'nvb' => 'unvalidateDetection',
+            'detectionHistory' => $detection_history
+
+        ]);
+    }
+
+    public function history(){
+        $detection_history = DetectionHistory::orderBy("created_at","asc")->get();
+
+        return view('laborant.detection.history',[
+            'title' => 'Detection',
+            'nvb' => 'detectionHistory',
             'detectionHistory' => $detection_history
 
         ]);
