@@ -39,7 +39,7 @@
                                 <div class="p-5">
                                     <div class="text-center mb-5">
                                         <div class="text-center mt-1">
-                                            <h3 style="color : #3a4751;">LAB GINJAL</h3>
+                                            <img class="img-thumbnail" style="background-color : transparent; border : none; max-width:auto" src="{{ url('') }}/images/Kindney1080.png" alt="">
                                         </div>
                                     </div>
 

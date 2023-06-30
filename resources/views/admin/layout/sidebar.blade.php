@@ -2,10 +2,9 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand align-items-center justify-content-center mb-5" href="/min">
         <div class="sidebar-brand-icon">
-            {{-- <i class="fas fa-laugh-wink"></i> --}}
-            <img class="img-thumbnail" style="background-color : transparent; border : none; max-width: 50px" src="{{ url('') }}/img/ladang_icon.png" alt="">
+            <img class="img-thumbnail" style="background-color : transparent; border : none; max-width: 60px" src="{{ url('') }}/images/Kindney.png" alt="">
         </div>
-        <div class="sidebar-brand-text">Laboratorium</div>
+        <div class="sidebar-brand-text">Kindney - Lab</div>
     </a>
 
 
@@ -29,15 +28,15 @@
         Manage
     </div>
 
-     <!-- Nav Item - Manage Employee -->
-     <li class="nav-item mt-0 {{ ($nvb == 'employee') ? 'active' : '' }}">
+    <!-- Nav Item - Manage Employee -->
+    <li class="nav-item mt-0 {{ ($nvb == 'employee') ? 'active' : '' }}">
         <a class="nav-link" href="/employee">
             <i class="fas fa-fw fa-hospital"></i>
             <span>Hospital Employees</span></a>
     </li>
 
-     <!-- Nav Item - Manage Patient -->
-     <li class="nav-item mt-0 {{ ($nvb == 'patient') ? 'active' : '' }}">
+    <!-- Nav Item - Manage Patient -->
+    <li class="nav-item mt-0 {{ ($nvb == 'patient') ? 'active' : '' }}">
         <a class="nav-link" href="/patient">
             <i class="fas fa-fw fa-users"></i>
             <span>Patients</span></a>
