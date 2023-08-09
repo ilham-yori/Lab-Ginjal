@@ -42,8 +42,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function employee()
+    public function doctorHistory()
     {
-        return $this->hasOne(Employee::class, "user_id", "id");
+        return $this->hasMany(DetectionHistory::class, "doctor_id", "id");
+    }
+
+    public function laborantHistory()
+    {
+        return $this->hasMany(DetectionHistory::class, "laborant_id", "id");
     }
 }

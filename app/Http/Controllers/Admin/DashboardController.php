@@ -11,9 +11,9 @@ class DashboardController extends Controller
 {
     public function index(){
         if (Auth::check()) {
-            if (auth()->user()->employee->role_id == 2) {
+            if (auth()->user()->role_name == "Radiographer") {
                 return redirect('/laborant');
-            } else if (auth()->user()->employee->role_id == 3) {
+            } else if (auth()->user()->role_name == "Doctor") {
                 return redirect('/doctor');
             }
         }

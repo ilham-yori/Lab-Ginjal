@@ -13,7 +13,7 @@ class DetectionHistory extends Model
 
     public function doctor()
     {
-        return $this->belongsTo(Employee::class, "doctor_id", "id");
+        return $this->belongsTo(User::class, "doctor_id", "id");
     }
 
     public function patient()
@@ -23,7 +23,7 @@ class DetectionHistory extends Model
 
     public function laborant()
     {
-        return $this->belongsTo(Employee::class, "laborant_id", "id");
+        return $this->belongsTo(User::class, "laborant_id", "id");
     }
 
 }

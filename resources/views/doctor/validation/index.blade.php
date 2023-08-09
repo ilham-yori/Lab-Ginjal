@@ -1,12 +1,12 @@
 @extends('doctor.layout.main')
 @section('validation')
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Recent Validate Detection Data</h1>
+    <h1 class="h3 mb-0 text-gray-800">Recent Unvalidate Detection Data</h1>
 </div>
 
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Recent Validate Detection Data</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Recent Unvalidate Detection Data</h6>
     </div>
 
     <div class="card-body">

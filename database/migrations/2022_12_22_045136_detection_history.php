@@ -25,8 +25,8 @@ return new class extends Migration
             $table->dateTime('validation_date_detection')->nullable();
             $table->timestamps();
             $table->foreign('patient_id')->references('id')->on('patients');
-            $table->foreign('laborant_id')->references('id')->on('hospital_employees');
-            $table->foreign('doctor_id')->references('id')->on('hospital_employees');
+            $table->foreign('laborant_id')->references('id')->on('users');
+            $table->foreign('doctor_id')->references('id')->on('users');
         });
     }
 

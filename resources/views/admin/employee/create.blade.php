@@ -42,9 +42,9 @@
                 <div class="form-group">
                     <label for="role">Role</label>
                     <select name="role" class="form-control" id="role">
-                        <option value="1">Admin</option>
-                        <option value="2">Laborant</option>
-                        <option value="3">Doctor</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Radiographer">Radiographer</option>
+                        <option value="Doctor">Doctor</option>
                     </select>
                 </div>
 

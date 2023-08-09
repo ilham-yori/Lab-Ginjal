@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -12,11 +11,11 @@ class LoginController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            if (auth()->user()->employee->role_id == 1) {
+            if (auth()->user()->role_name == "Admin") {
                 return redirect('/admin');
-            }else if(auth()->user()->employee->role_id == 2){
+            }else if(auth()->user()->role_name == "Radiographer"){
                 return redirect('/laborant');
-            }else if (auth()->user()->employee->role_id == 3) {
+            }else if (auth()->user()->role_name == "Doctor") {
                 return redirect('/doctor');
             }
         } else {

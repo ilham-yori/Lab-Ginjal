@@ -29,7 +29,8 @@
 
                         <div class="form-group">
                             <label for="prediction">Prediction</label>
-                            <input type="text" name="prediction" class="form-control @error('prediction') is-invalid @enderror" id="prediction" readonly>
+                            <input type="text" name="prediction" class="form-control @error('prediction') is-invalid @enderror" id="prediction"
+                            style="background-color: #fff;" readonly>
 
                             @error('prediction')
                                 <div class="invalid-feedback">

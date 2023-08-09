@@ -22,32 +22,24 @@ class UserSeeders extends Seeder
         $user->password = bcrypt('1234');
         $user->status = 'Active';
         $user->timestamps;
+        $user->role_name = "Admin";
+        $user->name = "Muhammad Dimas, S.Kom";
+        $user->address = "Mojokerto";
+        $user->phone_number = "085534823129";
+        $user->timestamps;
         $user->save();
-
-        $employee = new Employee;
-        $employee->user_id = $user->id;
-        $employee->role_id = 1;
-        $employee->name = "Muhammad Dimas, S.Kom";
-        $employee->address = "Mojokerto";
-        $employee->phone_number = "085534823129";
-        $employee->timestamps;
-        $employee->save();
 
         $user2 = new User;
         $user2->email = 'laborant@lab-ginjal.com';
         $user2->password = bcrypt('1234');
         $user2->status = 'Active';
         $user2->timestamps;
+        $user2->role_name = "Radiographer";
+        $user2->name = "Ali Akbar, A.Rad., S.ST., M.Kes.";
+        $user2->address = "Sidoarjo";
+        $user2->phone_number = "085334885723";
+        $user2->timestamps;
         $user2->save();
-
-        $employee = new Employee;
-        $employee->user_id = $user2->id;
-        $employee->role_id = 2;
-        $employee->name = "Adelina Pratiwi, A.Rad., S.ST., M.Kes.";
-        $employee->address = "Sidoarjo";
-        $employee->phone_number = "085334885723";
-        $employee->timestamps;
-        $employee->save();
         DB::commit();
 
         $user3 = new User;
@@ -55,16 +47,12 @@ class UserSeeders extends Seeder
         $user3->password = bcrypt('1234');
         $user3->status = 'Active';
         $user3->timestamps;
+        $user3->role_name = "Doctor";
+        $user3->name = "Dr. Efrilyn Sidabutar, SpPD.";
+        $user3->address = "Surabaya";
+        $user3->phone_number = "085857211253";
+        $user3->timestamps;
         $user3->save();
-
-        $employee = new Employee;
-        $employee->user_id = $user3->id;
-        $employee->role_id = 3;
-        $employee->name = "Dr. Efrilyn Sidabutar, SpPD.";
-        $employee->address = "Surabaya";
-        $employee->phone_number = "085857211253";
-        $employee->timestamps;
-        $employee->save();
         DB::commit();
     }
 

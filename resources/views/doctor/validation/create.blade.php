@@ -1,7 +1,7 @@
 @extends('doctor.layout.main')
 @section('validation')
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Patient Detail Data Validate </h1>
+        <h1 class="h3 mb-0 text-gray-800">Validate Patient Detection </h1>
     </div>
 
     <div class="row">
@@ -61,7 +61,7 @@
                                 <p class="mb-0">Doctor Name</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">{{ auth()->user()->employee->name }}</p>
+                                <p class="text-muted mb-0">{{ auth()->user()->name }}</p>
                             </div>
                         </div>
                         <hr>
